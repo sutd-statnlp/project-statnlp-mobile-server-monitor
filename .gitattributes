@@ -1,2 +1,3 @@
-www/static linguist-vendored
-app/static linguist-vendored
+www/static/* linguist-vendored
+app/static/* linguist-vendored
+*.css linguist-vendored
