@@ -28,7 +28,7 @@
                             </thead>
                           <tbody>
                               <tr v-for="(item, index) in getNetwork.interface" :key="index">
-                                <td>index</td>
+                                <td>{{index}}</td>
                                 <td>{{item.mtu}}</td>
                                 <td>{{item.name}}</td>
                                 <td>{{item.hardwareaddr}}</td>

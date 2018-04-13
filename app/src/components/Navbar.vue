@@ -56,6 +56,7 @@
 <script>
 import AlterService from '@/services/alter-service'
 import StoreService from '@/services/store-service'
+import { loadProgressBar } from 'axios-progress-bar'
 
 export default {
   name: 'Navbar',
@@ -64,7 +65,12 @@ export default {
     }
   },
   created () {
-    return this.$store.dispatch('getServers')
+    loadProgressBar({
+      showSpinner: false,
+      easing: 'ease',
+      speed: 500
+    })
+    this.$store.dispatch('getServers')
   },
   computed: {
     getServers () {

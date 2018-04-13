@@ -2,6 +2,8 @@ import axios from 'axios'
 
 class ServerService {
   constructor () {
+    axios.defaults.timeout = 2000
+
     this.httpSchema = 'http://'
     this.port = ':8210'
 
@@ -88,6 +90,9 @@ class ServerService {
   }
   getNetworkInterfaceEndpoint () {
     return this.getEndpoint() + '/api/net/interface'
+  }
+  getGpuInfoEndpoint () {
+    return this.getEndpoint() + '/api/gpu/info'
   }
 }
 

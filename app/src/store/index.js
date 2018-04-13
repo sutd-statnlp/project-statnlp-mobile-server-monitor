@@ -7,6 +7,7 @@ import HostStore from './host-store'
 import LoadStore from './load-store'
 import DiskStore from './disk-store'
 import NetworkStore from './network-store'
+import GpuStore from './gpu-store'
 import ServerService from '@/services/server-service'
 
 Vue.use(Vuex)
@@ -19,7 +20,8 @@ export default new Vuex.Store({
     host: HostStore,
     load: LoadStore,
     disk: DiskStore,
-    network: NetworkStore
+    network: NetworkStore,
+    gpu: GpuStore
   },
   state: {
     servers: [],

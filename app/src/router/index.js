@@ -8,6 +8,7 @@ import LoadPage from '@/pages/LoadPage'
 import DiskPage from '@/pages/DiskPage'
 import NetworkPage from '@/pages/NetworkPage'
 import AppsPage from '@/pages/AppsPage'
+import GpuPage from '@/pages/GpuPage'
 
 Vue.use(Router)
 
@@ -52,6 +53,11 @@ export default new Router({
       path: '/apps',
       name: 'AppsPage',
       component: AppsPage
+    },
+    {
+      path: '/gpu',
+      name: 'GpuPage',
+      component: GpuPage
     }
   ]
 })

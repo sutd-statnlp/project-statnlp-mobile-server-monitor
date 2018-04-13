@@ -8,6 +8,7 @@
                 <SidebarItem title="Dashboard" icon="dashboard" isActive="true" />
                 <SidebarItem title="CPU" icon="developer_board" link="/cpu" />
                 <SidebarItem title="Memory" icon="memory" link="/memory" />
+                <SidebarItem title="GPU" icon="grain" link="/gpu" />
                 <SidebarItem title="Host" icon="dns" link="/host" />
                 <SidebarItem title="Load" icon="line_style" link="/load" />
                 <SidebarItem title="Disk" icon="storage" link="/disk" />
@@ -41,6 +42,15 @@ export default {
     $('.m-sidenav ul li').click(function () {
       $('.m-sidenav ul li').removeClass('active')
       $(this).addClass('active')
+    })
+
+    let currentPath = '#' + this.$route.path
+    $('.m-sidenav ul li').each(function () {
+      let itemPath = $(this).find('a').attr('href')
+      if (currentPath === itemPath) {
+        $('.m-sidenav ul li').removeClass('active')
+        $(this).addClass('active')
+      }
     })
   }
 }
